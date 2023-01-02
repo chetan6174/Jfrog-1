@@ -1,0 +1,36 @@
+Jfrog Installation steps
+
+1. First we have to launch the instances
+      - ec2-instance
+      - t2.medium ----> launch instance
+      - security group -Select All trafic) & save it.
+2. Connect instance through Mobaxtreme
+      - remote address-public ip of instance
+      - username- ec2-user
+      - (advance settings -
+                         use private key
+                        - click on check box
+                        - select .pem key which we have used to create instance
+                        -ok)
+
+3. a. Sudo su -(convert ec2-user to complete root user)
+   b. wget https://releases.jfrog.io/artifactory/bintray-artifactory/org/artifactory/oss/jfrog-artifactory-oss/[RELEASE]/jfrog-artifactory-oss-[RELEASE]-linux.tar.gz?_gl=1*1li7shh*_ga*NDE5NTQ4Mzk4LjE2NTc3OTg1NTM.*_ga_SQ1NR9VTFJ*MTY1Nzg3NzAzNi40LjEuMTY1Nzg3NzA4NS4xMQ..
+      (to download JFrog)
+   c. tar -zvxf jfrog-artifactory-oss-\[RELEASE\]-linux.tar.gz\?_gl\=1\*1li7shh\*_ga\*NDE5NTQ4Mzk4LjE2NTc3OTg1NTM.\*_ga_SQ1NR9VTFJ\*MTY1Nzg3NzAzNi40LjEuMTY1Nzg3NzA4NS4xMQ..
+      (to untar and unzip)
+4. ./artifactory-oss-7.49.3/app/bin/artifactoryctl
+      (to run or start JFrog service) or cd artifactory-oss-7.49.3
+                                         cd app
+                                         cd bin
+                                         ./artifactoryctl (to run this file)
+5. Now to access Jfrog application
+   PublicIP:8082 (default jfrog port no)
+   username:admin
+   password:password
+
+6. Now need to change pasword
+   get started
+   give password - Admin@123
+   next..,then skip..,skip., and finally finish
+7. Login page will display
+   enter user name and password then we are in JFrog home page.
