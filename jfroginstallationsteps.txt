@@ -1,0 +1,22 @@
+1.create a instance in AWS with t2.medium and security groups add allow all traffic with instance name "jfrog-1".
+2.connect the instance in mobaxterm.
+3.(commands-$) $ sudo su - 
+4.$ wget [copy paste URL provided by trainer] https://releases.jfrog.io/artifactory/bintray-artifactory/org/artifactory/oss/jfrog-artifactory-oss/[RELEASE]/jfrog-artifactory-oss-[RELEASE]-linux.tar.gz?_gl=1*1li7shh*_ga*NDE5NTQ4Mzk4LjE2NTc3OTg1NTM.*_ga_SQ1NR9VTFJ*MTY1Nzg3NzAzNi40LjEuMTY1Nzg3NzA4NS4xMQ..
+5.it will download the tar file, unziip it in mobaxterm
+6.$ tar -zvxf jfrogartifactory.....tar
+7.ls
+8.cd artifactory
+9.ls
+10.cd app
+11.ls
+12.cd bin
+13.ls
+14.we have to run artifactoryctl file $ ./artifactoryctl
+15.it wi show successfull.
+16.copy the public IP of instance jfrog-1 and paste it in browser with port number 8082
+17.jfrog page will be shown.
+18.username- "admin" password- "password"
+19.click login
+20.click get started
+21.change password- "Admin@123"
+22.next-> skip-skip-finish.
